@@ -18,7 +18,7 @@ spec:
         app: flaskdemo
     spec:
       containers:
-      - image: registry-uat.fke.fptcloud.com/nguyenhoangminh1106/test:latest
+      - image: registry-uat.fke.fptcloud.com/576bb055-bc8d-4b31-a36a-a454eaeb2921//test:latest
         name: flaskdemo
         resources: {}
 status: {}
