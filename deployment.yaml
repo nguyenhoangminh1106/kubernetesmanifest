@@ -1,3 +1,12 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  name: myregistrykey
+  namespace: default
+data:
+  .dockerconfigjson: eyAiYXV0aHMiOiB7ICJodHRwczovL3JlZ2lzdHJ5LXVhdC5ma2UuZnB0Y2xvdWQuY29tIjogeyAiYXV0aCI6ICJlSEJzWVhRdGMzUm5RR1p3ZEdOc2IzVmtMbU52YlRwaFRWVnpSVFJKV25wdVdXeFdWMGh1U21sQ2VteGphVlp1UmpOTVQxVlJidz09IiB9IH0gfQ==
+type: kubernetes.io/dockerconfigjson
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -25,6 +34,8 @@ spec:
         volumeMounts:
           - name: resolve-domain
             mountPath: /etc/hosts
+      imagePullSecrets:
+      - name: myregistrykey
       volumes:
       - name: resolve-domain
         hostPath:
