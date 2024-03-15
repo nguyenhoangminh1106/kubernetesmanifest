@@ -3,7 +3,6 @@ kind: Secret
 metadata:
   name: registry-credentials
   namespace: default
-type: kubernetes.io/dockerconfigjson
 stringData:
   username: xplat-stg@fptcloud.com
   password: aMUsE4IZznYlVWHnJiBzlciVnF3LOUQo
