@@ -22,6 +22,12 @@ spec:
       # - image: nguyenhoangminh1106/test:51
         name: flaskdemo
         resources: {}
+      - name: resolve-domain
+        mountPath: /etc/hosts
+      volumes:
+      - name: resolve-domain
+        hostPath:
+          path: /etc/hosts
 status: {}
 ---
 apiVersion: v1
