@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
        - image: registry-uat.fke.fptcloud.com/576bb055-bc8d-4b31-a36a-a454eaeb2921/test:53
-      # - image: nguyenhoangminh1106/test:51
+      
         name: flaskdemo
         resources: {}
 status: {}
