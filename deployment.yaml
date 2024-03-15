@@ -3,6 +3,7 @@ kind: Secret
 metadata:
   name: registry-credentials
   namespace: default
+type: kubernetes.io/basic-auth
 stringData:
   username: xplat-stg@fptcloud.com
   password: aMUsE4IZznYlVWHnJiBzlciVnF3LOUQo
