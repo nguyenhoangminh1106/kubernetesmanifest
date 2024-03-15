@@ -4,8 +4,9 @@ metadata:
   name: registry-credentials
   namespace: default
 type: kubernetes.io/dockerconfigjson
-data:
-  .dockerconfigjson: eyJhdXRocyI6eyJyZWdpc3RyeS11YXQuZmtlLmZwdGNsb3VkLmNvbSI6eyJ1c2VybmFtZSI6InhwbGF0LXN0Z0BmcHRjbG91ZC5jb20iLCJwYXNzd29yZCI6ImFNVXNFNElaem5ZbFZXSG5KaUJ6bGNpVm5GM0xPVVFvIiwiYXV0aCI6Ig==In19fQ==
+stringData:
+  username: xplat-stg@fptcloud.com
+  password: aMUsE4IZznYlVWHnJiBzlciVnF3LOUQo
 ---
 apiVersion: apps/v1
 kind: Deployment
