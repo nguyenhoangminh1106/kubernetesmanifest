@@ -1,3 +1,12 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  name: registry-credentials
+  namespace: default
+type: kubernetes.io/dockerconfigjson
+data:
+  .dockerconfigjson: eyJhdXRocyI6eyJyZWdpc3RyeS11YXQuZmtlLmZwdGNsb3VkLmNvbSI6eyJ1c2VybmFtZSI6InhwbGF0LXN0Z0BmcHRjbG91ZC5jb20iLCJwYXNzd29yZCI6ImFNVXNFNElaem5ZbFZXSG5KaUJ6bGNpVm5GM0xPVVFvIiwiYXV0aCI6Ig==In19fQ==
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -18,12 +27,12 @@ spec:
         app: flaskdemo
     spec:
       containers:
-      - image: 576bb055-bc8d-4b31-a36a-a454eaeb2921/test:54
+      - image: registry-uat.fke.fptcloud.com/576bb055-bc8d-4b31-a36a-a454eaeb2921/test:54
       # - image: nguyenhoangminh1106/test:51
         name: flaskdemo
         resources: {}
-      imagePullSecrets:  # Add this section
-      - name: fptContainerRegistry
+      imagePullSecrets:
+      - name: registry-credentials
 status: {}
 ---
 apiVersion: v1
