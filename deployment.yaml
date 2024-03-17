@@ -50,6 +50,7 @@ metadata:
     app: lb-service
 spec:
   type: LoadBalancer
+  loadBalancerIP: 103.160.90.200
   ports:
   - port: 80
     targetPort: 5000
